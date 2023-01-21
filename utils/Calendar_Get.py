@@ -52,7 +52,7 @@ def _get_event():
             start = event['start'].get('dateTime', event['start'].get('date'))
             parsedDate = parser.parse(start)
             time = str(parsedDate.time())
-            print(time, event['summary'])
+            #print(time, event['summary'])
             to_dos.append("<u>" + time + "</u>" + " " + event['summary'].capitalize())
 
     except HttpError as error:
