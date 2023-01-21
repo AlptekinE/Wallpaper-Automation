@@ -17,10 +17,7 @@ SCOPES = ['https://www.googleapis.com/auth/calendar.readonly']
 
 
 def _get_event():
-    etkinlikler = []
-    """Shows basic usage of the Google Calendar API.
-    Prints the start and name of the next 10 events on the user's calendar.
-    """
+    to_dos = []
     creds = None
 
     if os.path.exists('../token.json'):
@@ -56,12 +53,12 @@ def _get_event():
             parsedDate = parser.parse(start)
             time = str(parsedDate.time())
             print(time, event['summary'])
-            etkinlikler.append("<u>" + time + "</u>" + " " + event['summary'].capitalize())
+            to_dos.append("<u>" + time + "</u>" + " " + event['summary'].capitalize())
 
     except HttpError as error:
         print('An error occurred: %s' % error)
 
-    return etkinlikler
+    return to_dos
 
 
 if __name__ == '__main__':
