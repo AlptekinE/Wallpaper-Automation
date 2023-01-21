@@ -4,11 +4,11 @@ from utils import Calendar_Get
 
 def _regex_remove(regex_part):
     the_regex = re.compile("".join(["\t", regex_part, "\[[^]]*]"]))  # \[[^}]+]
-    print(the_regex)
+    #print(the_regex)
     with open('Wallpaper File Location/schedule+notes.js', 'r') as myfile:
         data = myfile.read()
         data = re.sub(the_regex, "\t\"Notes\": []", data)
-        print(data)
+        #print(data)
         with open('Wallpaper File Location/schedule+notes.js', 'w') as newfile:
             newfile.write(data)
 
@@ -21,7 +21,7 @@ def _regex_add(events):
     with open('Wallpaper File Location/schedule+notes.js', 'r') as myfile:
         data = myfile.read()
         data = re.sub(the_regex, events, data)
-        print(data)
+        #print(data)
         with open('Wallpaper File Location/schedule+notes.js', 'w') as newfile:
             newfile.write(data)
 
