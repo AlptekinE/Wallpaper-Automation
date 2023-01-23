@@ -1,5 +1,5 @@
 # Wallpaper-Automation
-Automation for N0XT's wallpaper
+This python script is used to get google calendar events and import them to the wallpaper's json file
 
 This project is still in progress
 
