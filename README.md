@@ -1,5 +1,5 @@
 # Wallpaper-Automation
-Automation for NOXT's wallpaper
+Automation for N0XT's wallpaper
 
 This project is still in progress
 
